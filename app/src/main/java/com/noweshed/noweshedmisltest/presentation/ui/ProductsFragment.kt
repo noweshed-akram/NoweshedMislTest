@@ -2,11 +2,11 @@ package com.noweshed.noweshedmisltest.presentation.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.noweshed.noweshedmisltest.R
 import com.noweshed.noweshedmisltest.data.util.Constants
 import com.noweshed.noweshedmisltest.data.util.Resource
@@ -70,5 +70,10 @@ class ProductsFragment : Fragment() {
         }
 
         fragmentProductsBinding.productRecyclerView.adapter = productAdapter
+        productAdapter.setOnItemClickListener { response ->
+            val bundle = Bundle()
+            bundle.putInt("productId", response.id)
+            findNavController().navigate(R.id.action_productFragment_to_detailsFragment, bundle)
+        }
     }
 }

@@ -7,23 +7,23 @@ import java.io.Serializable
  * Created by noweshedakram on 3/12/22.
  */
 data class ProductResponse(
-    @SerializedName("price")
-    val price: Int,
-    @SerializedName("model")
-    val model: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("image_url")
-    val imageUrl: String,
-    @SerializedName("title")
-    val title: String,
     @SerializedName("id")
     val id: Int,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("model")
+    val model: String,
+    @SerializedName("title")
+    val title: String,
     @SerializedName("size")
     val size: Int,
     @SerializedName("description")
     val description: String,
-):Serializable
+    @SerializedName("image_url")
+    val imageUrl: String,
+    @SerializedName("price")
+    val price: Int,
+) : Serializable
 
 //data class Specification(
 //    @SerializedName("Display")

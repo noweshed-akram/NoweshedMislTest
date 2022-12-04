@@ -1,6 +1,5 @@
 package com.noweshed.noweshedmisltest.presentation.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -20,18 +19,20 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
         RecyclerView.ViewHolder(binding.root) {
         fun bindData(productResponse: ProductResponse) {
 
-//            Glide.with(binding.root)
-//                .load(productResponse.imageUrl)
-//                .placeholder(R.drawable.thumbnail)
-//                .into(binding.productImage)
+            Glide.with(binding.root)
+                .load(productResponse.imageUrl)
+                .placeholder(R.drawable.thumbnail)
+                .into(binding.productImage)
 
-            Log.d("bindData: ", productResponse.title)
-
-            binding.productTitle.text = productResponse.title
-            binding.productModel.text = productResponse.model
-//            binding.productSize.text = productResponse.size.toString()
+            binding.productName.text = productResponse.name
+            binding.productModel.text = "Model: ${productResponse.model}"
+            binding.productSize.text = "Size: ${productResponse.size}"
             binding.productDescription.text = productResponse.description
-//            binding.productPrice.text = productResponse.price.toString()
+            binding.productPrice.text = "BDT. ${productResponse.price}"
+
+            binding.itemView.setOnClickListener {
+                onItemClickListener(productResponse)
+            }
 
         }
     }

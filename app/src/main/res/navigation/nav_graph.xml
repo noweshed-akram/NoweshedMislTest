@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_productFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/productFragment" />
     </fragment>
 
     <fragment

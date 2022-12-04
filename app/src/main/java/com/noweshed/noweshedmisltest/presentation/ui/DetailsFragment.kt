@@ -39,7 +39,11 @@ class DetailsFragment : Fragment() {
 
         fragmentDetailsBinding = FragmentDetailsBinding.bind(view)
 
-        productViewModel.getProductById(Constants.SECRET_CODE, 1)
+        val prodId = arguments?.getInt("productId", 1)
+
+        if (prodId != null) {
+            productViewModel.getProductById(Constants.SECRET_CODE, prodId)
+        }
 
         productViewModel.product.observe(viewLifecycleOwner) { response ->
             when (response) {
