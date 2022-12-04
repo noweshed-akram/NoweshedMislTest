@@ -26,14 +26,13 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
 
             binding.productName.text = productResponse.name
             binding.productModel.text = "Model: ${productResponse.model}"
-            binding.productSize.text = "Size: ${productResponse.size}"
+            binding.productSize.text = "Size: ${productResponse.size}\" "
             binding.productDescription.text = productResponse.description
             binding.productPrice.text = "BDT. ${productResponse.price}"
 
             binding.itemView.setOnClickListener {
                 onItemClickListener(productResponse)
             }
-
         }
     }
 

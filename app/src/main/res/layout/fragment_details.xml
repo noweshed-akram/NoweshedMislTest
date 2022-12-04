@@ -58,13 +58,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:strokeColor="@color/primaryColorLight"
+                app:strokeColor="@color/primaryColorDark"
                 app:strokeWidth="1dp">
 
                 <ImageView
                     android:id="@+id/productImage"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="250dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/thumbnail" />
 
@@ -77,7 +77,7 @@
                 android:layout_marginVertical="15dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:justificationMode="inter_word"
-                android:text="Title"
+                android:text="Name"
                 android:textColor="@color/textColor"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Model"
+                android:text="Title"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/productName"
@@ -101,7 +101,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Model"
+                android:justificationMode="inter_word"
+                android:text="Description"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/productTitle"
@@ -113,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:justificationMode="inter_word"
-                android:text="50000 BDT."
+                android:text="price"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -121,8 +122,8 @@
 
             <ImageView
                 android:id="@+id/star"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="@+id/productDescription"
                 app:layout_constraintTop_toBottomOf="@id/productDescription"
@@ -136,7 +137,7 @@
                 android:fontFamily="@font/poppins_light"
                 android:text="4.5"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="@+id/star"
                 app:layout_constraintStart_toEndOf="@+id/star"
                 app:layout_constraintTop_toTopOf="@+id/star" />
@@ -149,7 +150,7 @@
                 android:fontFamily="@font/poppins_light"
                 android:text="86 Reviews"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="@+id/star"
                 app:layout_constraintStart_toEndOf="@+id/item_rating"
                 app:layout_constraintTop_toTopOf="@+id/star" />
@@ -251,6 +252,31 @@
                 app:layout_constraintTop_toBottomOf="@id/modelHeading" />
 
             <TextView
+                android:id="@+id/processorHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Processor"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/displayHeading"
+                app:layout_constraintTop_toBottomOf="@id/displayInfo" />
+
+            <TextView
+                android:id="@+id/processorInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Processor Info"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/displayInfo" />
+
+            <TextView
                 android:id="@+id/osHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -259,8 +285,8 @@
                 android:text="Operating System"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/displayHeading"
-                app:layout_constraintTop_toBottomOf="@id/displayHeading" />
+                app:layout_constraintStart_toStartOf="@+id/processorHeading"
+                app:layout_constraintTop_toBottomOf="@id/processorInfo" />
 
             <TextView
                 android:id="@+id/osInfo"
@@ -273,7 +299,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/displayHeading" />
+                app:layout_constraintTop_toBottomOf="@id/processorInfo" />
 
             <TextView
                 android:id="@+id/prodTypeHeading"
@@ -285,7 +311,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/osHeading"
-                app:layout_constraintTop_toBottomOf="@id/osHeading" />
+                app:layout_constraintTop_toBottomOf="@id/osInfo" />
 
             <TextView
                 android:id="@+id/prodTypeInfo"
@@ -298,7 +324,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/osHeading" />
+                app:layout_constraintTop_toBottomOf="@id/osInfo" />
 
             <TextView
                 android:id="@+id/dimensionsHeading"
@@ -310,7 +336,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/prodTypeHeading"
-                app:layout_constraintTop_toBottomOf="@id/prodTypeHeading" />
+                app:layout_constraintTop_toBottomOf="@id/prodTypeInfo" />
 
             <TextView
                 android:id="@+id/dimensionsInfo"
@@ -323,7 +349,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/prodTypeHeading" />
+                app:layout_constraintTop_toBottomOf="@id/prodTypeInfo" />
 
             <TextView
                 android:id="@+id/videoHeading"
@@ -335,7 +361,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/dimensionsHeading"
-                app:layout_constraintTop_toBottomOf="@id/dimensionsHeading" />
+                app:layout_constraintTop_toBottomOf="@id/dimensionsInfo" />
 
             <TextView
                 android:id="@+id/videoInfo"
@@ -348,7 +374,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/dimensionsHeading" />
+                app:layout_constraintTop_toBottomOf="@id/dimensionsInfo" />
 
             <TextView
                 android:id="@+id/audioHeading"
@@ -360,7 +386,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/videoHeading"
-                app:layout_constraintTop_toBottomOf="@id/videoHeading" />
+                app:layout_constraintTop_toBottomOf="@id/videoInfo" />
 
             <TextView
                 android:id="@+id/audioInfo"
@@ -373,7 +399,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/videoHeading" />
+                app:layout_constraintTop_toBottomOf="@id/videoInfo" />
 
             <TextView
                 android:id="@+id/connectivityHeading"
@@ -385,7 +411,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/audioHeading"
-                app:layout_constraintTop_toBottomOf="@id/audioHeading" />
+                app:layout_constraintTop_toBottomOf="@id/audioInfo" />
 
             <TextView
                 android:id="@+id/connectivityInfo"
@@ -398,7 +424,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/audioHeading" />
+                app:layout_constraintTop_toBottomOf="@id/audioInfo" />
 
             <TextView
                 android:id="@+id/powerHeading"
@@ -410,7 +436,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/connectivityHeading"
-                app:layout_constraintTop_toBottomOf="@id/connectivityHeading" />
+                app:layout_constraintTop_toBottomOf="@id/connectivityInfo" />
 
             <TextView
                 android:id="@+id/powerInfo"
@@ -423,7 +449,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/connectivityHeading" />
+                app:layout_constraintTop_toBottomOf="@id/connectivityInfo" />
 
             <TextView
                 android:id="@+id/smartFetHeading"
@@ -435,7 +461,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/powerHeading"
-                app:layout_constraintTop_toBottomOf="@id/powerHeading" />
+                app:layout_constraintTop_toBottomOf="@id/powerInfo" />
 
             <TextView
                 android:id="@+id/smartFetInfo"
@@ -448,7 +474,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/powerHeading" />
+                app:layout_constraintTop_toBottomOf="@id/powerInfo" />
 
             <TextView
                 android:id="@+id/otherHeading"
@@ -460,7 +486,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/smartFetHeading"
-                app:layout_constraintTop_toBottomOf="@id/smartFetHeading" />
+                app:layout_constraintTop_toBottomOf="@id/smartFetInfo" />
 
             <TextView
                 android:id="@+id/otherInfo"
@@ -473,7 +499,7 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/smartFetHeading" />
+                app:layout_constraintTop_toBottomOf="@id/smartFetInfo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
