@@ -30,6 +30,9 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
             binding.productDescription.text = productResponse.description
             binding.productPrice.text = "BDT. ${productResponse.price}"
 
+            binding.itemRating.text = "4.8" //TODO remove constant if data will available
+            binding.itemReview.text = "98 Review" //TODO remove constant if data will available
+
             binding.itemView.setOnClickListener {
                 onItemClickListener(productResponse)
             }

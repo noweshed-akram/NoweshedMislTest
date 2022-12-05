@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">NoweshedMISLTest</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="glory_tv">Glory Tv</string>
+    <string name="glory_electronics">Glory Electronics</string>
+    <string name="welcome">Welcome,</string>
+    <string name="find_your_best_deals_today">Find your best deals today..</string>
+    <string name="title">Title</string>
+    <string name="model">Model</string>
+    <string name="bdt">BDT.</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="reviews">Reviews</string>
+    <string name="rating">Rating</string>
+
+    <string name="name">Name</string>
+    <string name="specification">Specification</string>
+    <string name="display">Display</string>
+    <string name="processor">Processor</string>
+    <string name="display_info">Display Info</string>
+    <string name="model_info">Model Info</string>
+    <string name="processor_info">Processor Info</string>
+    <string name="operating_system">Operating System</string>
+    <string name="operating_system_info">Operating System Info</string>
+    <string name="product_type">Product Type</string>
+    <string name="product_type_info">Product Type Info</string>
+    <string name="dimensions_mm">Dimensions (mm)</string>
+    <string name="dimension_info">Dimension Info</string>
+    <string name="video">Video</string>
+    <string name="video_info">Video Info</string>
+    <string name="audio">Audio</string>
+    <string name="audio_info">Audio Info</string>
+    <string name="connectivity">Connectivity</string>
+    <string name="connectivity_info">Connectivity Info</string>
+    <string name="power">Power</string>
+    <string name="power_info">Power Info</string>
+    <string name="smart_feature">Smart Feature</string>
+    <string name="smart_feature_info">Smart Feature Info</string>
+    <string name="others">Others</string>
+    <string name="others_info">Others Info</string>
+
+
 </resources>

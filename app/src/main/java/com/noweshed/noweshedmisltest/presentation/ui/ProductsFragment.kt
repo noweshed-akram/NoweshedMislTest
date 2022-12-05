@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.noweshed.noweshedmisltest.R
@@ -59,6 +60,8 @@ class ProductsFragment : Fragment() {
                 }
                 is Resource.Error -> {
                     Log.i("ProductsFragment", "${response.message}")
+                    // TODO We Can Show Error Dialog
+                    Toast.makeText(context, "${response.message}", Toast.LENGTH_LONG).show()
                     fragmentProductsBinding.loadingProgress.loadingProgress.visibility = View.GONE
                 }
             }
@@ -72,7 +75,7 @@ class ProductsFragment : Fragment() {
         fragmentProductsBinding.productRecyclerView.adapter = productAdapter
         productAdapter.setOnItemClickListener { response ->
             val bundle = Bundle()
-            bundle.putInt("productId", response.id)
+            bundle.putInt(Constants.PRODUCT_ID, response.id)
             findNavController().navigate(R.id.action_productFragment_to_detailsFragment, bundle)
         }
     }

@@ -1,56 +1,30 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
-    id 'androidx.navigation.safeargs.kotlin'
-}
+# Glory TV
 
-android {
-    namespace 'com.noweshed.noweshedmisltest'
-    compileSdk 32
+# Requirements
 
-    defaultConfig {
-        applicationId "com.noweshed.noweshedmisltest"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0.0"
+## Splash Screen:
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+Create a 5-second heart-beat animation for the logo icon circle. After the time is up and the
+animation is done navigate to the list page.
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-    buildFeatures{
-        viewBinding = true
-    }
-    kapt {
-        correctErrorTypes true
-    }
-}
+## List page:
 
+Create an old-school pagination-based list screen. Five entries per page. You need to handle the
+pagination locally because the related API will send all the data in a single call. How much
+information you are going to show on the list page is totally your decision. Use your creativity and
+make it pretty.
+
+## Details Page:
+
+Show all the data. Use your creativity and make it pretty.
+
+# Dependencies
+
+Added the following dependencies:
+
+```
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
+    
     //navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
@@ -84,3 +58,13 @@ dependencies {
     //Swipe refresh
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
+```
+
+# Design Pattern & Code Structure
+
+In this project I followed MVVM (Model — View — ViewModel) with Clean Architecture and Navigation
+Component
+
+# Known Issue
+
+list Paging is yet to implement due to my time constant :(

@@ -39,7 +39,7 @@ class DetailsFragment : Fragment() {
 
         fragmentDetailsBinding = FragmentDetailsBinding.bind(view)
 
-        val prodId = arguments?.getInt("productId", 1)
+        val prodId = arguments?.getInt(Constants.PRODUCT_ID, 1)
 
         if (prodId != null) {
             productViewModel.getProductById(Constants.SECRET_CODE, prodId)
@@ -62,6 +62,10 @@ class DetailsFragment : Fragment() {
                         "BDT. ${response.data?.price.toString()}"
                     fragmentDetailsBinding.productTitle.text = response.data?.title
                     fragmentDetailsBinding.productDescription.text = response.data?.description
+                    fragmentDetailsBinding.itemRating.text =
+                        "4.8" //TODO remove constant if data will available
+                    fragmentDetailsBinding.itemReview.text =
+                        "98 Review" //TODO remove constant if data will available
 
                     fragmentDetailsBinding.nameInfo.text = response.data?.name
                     fragmentDetailsBinding.modelInfo.text = response.data?.model?.trim()
@@ -167,6 +171,8 @@ class DetailsFragment : Fragment() {
                     Log.i("ProductsFragment", "Loading...")
                 }
                 is Resource.Error -> {
+                    // TODO We Can Show Error Dialog
+                    Toast.makeText(context, "${response.message}", Toast.LENGTH_LONG).show()
                     fragmentDetailsBinding.loadingProgress.loadingProgress.visibility =
                         View.GONE
                 }
@@ -178,6 +184,7 @@ class DetailsFragment : Fragment() {
         }
 
         fragmentDetailsBinding.addToCart.setOnClickListener {
+            // TODO Product Cart Implementation
             Toast.makeText(context, "Product Added Successful!", Toast.LENGTH_LONG).show()
         }
 
