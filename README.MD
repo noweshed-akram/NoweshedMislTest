@@ -67,4 +67,4 @@ Component
 
 # Known Issue
 
-list Paging is yet to implement due to my time constant :(
+list Paging is yet to implement due to my time constant :( Since API will send all the data in a single call we can store data locally and paginate from local source
