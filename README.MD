@@ -2,6 +2,8 @@
 
 # Requirements
 
+<img src="https://raw.githubusercontent.com/noweshed-akram/NoweshedMislTest/master/extra/ui.png">
+
 ## Splash Screen:
 
 Create a 5-second heart-beat animation for the logo icon circle. After the time is up and the
